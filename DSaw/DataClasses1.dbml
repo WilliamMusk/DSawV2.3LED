@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DoubleSaw" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\Sql2008;Initial Catalog=DoubleSaw;Persist Security Info=True;User ID=sa" SettingsObjectName="DSaw.Properties.Settings" SettingsPropertyName="DoubleSawConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.OrderItems" Member="OrderItems">
+    <Type Name="OrderItems">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="OrderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ItemID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Length" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeftAngle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RightAngle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Note1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LengthNote" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuantityNote" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DoorID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Note3" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Note4" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ItemState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Priority" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GoodQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BadQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CutTimes" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CutDateTime" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[User]" Member="User" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="Users">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PassWord" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Orders" Member="Orders">
+    <Type Name="Orders">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="OrderDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Importer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="OrderState" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalQuantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Wait" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Delayed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Short" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DoneRate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AngleChangeStates" Member="AngleChangeStates">
+    <Type Name="AngleChangeStates">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AngleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ChangeDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LeftAngle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RightAngle" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
